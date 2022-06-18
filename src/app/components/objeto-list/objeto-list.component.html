@@ -1,0 +1,25 @@
+<app-chat></app-chat>
+<div class="container">
+  <div class="card text-center">
+     <div class="card-header">
+      <a [routerLink]="'/despliegue'">
+        <img src="https://cdn.pixabay.com/photo/2012/04/02/16/03/back-24838_1280.png" width="25px" alt="back" >
+      </a>
+        <h4><b>Objetos publicados</b></h4>
+        <h6>Si no aparecen objetos, presione en la esquina superior derecha.</h6>
+     </div>
+     <div class="card-body p-4">
+      <div class="objetos">
+        <div class="objeto" *ngFor="let objeto of objetos">
+            <div class="image" [ngStyle]="{ backgroundImage: 'url('+objeto.image+')' }"></div>
+            <div class="info">
+                <h4><b>{{objeto.name}}</b></h4>
+                <p><b>{{objeto.nombre}}</b></p>
+                <p>{{objeto.description}}</p>
+                <a [routerLink]="'/chat'">¡Envía un mensaje!</a>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+

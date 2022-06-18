@@ -1,0 +1,13 @@
+.container {
+
+  position: flex;
+
+}
+
+.alerta {
+
+  position: fixed;
+  top: 55px;
+  max-width: 500px;
+  right: 24px;
+}

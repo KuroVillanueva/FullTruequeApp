@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card text-center">
+     <div class="card-header">
+      <a [routerLink]="'/despliegue'">
+        <img src="https://cdn.pixabay.com/photo/2012/04/02/16/03/back-24838_1280.png" width="25px" alt="back" >
+      </a>
+        <b>Agrega tu objeto</b>
+     </div>
+     <div class="card-body p-4">
+      <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label class="form-label">Nombre usuario</label>
+            <input placeholder="Ingrese su nombre" type="text" class="form-control" formControlName="nombre">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Nombre del objeto</label>
+          <input placeholder="Ingrese el nombre del objeto" type="text" class="form-control" formControlName="name">
+      </div>
+        <div class="mb-3">
+            <label class="form-label">Descripción del objeto</label>
+            <textarea placeholder="Ingrese una descripción del objeto" class="form-control" cols="30" rows="3" formControlName="description"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Imagen del objeto</label>
+            <input placeholder="Ingrese Url de la imagen" type="text" class="form-control form-control-lg" id="formFileLg" formControlName="image">
+        </div>
+          <input type="submit" value="Agregar" class="btn btn-info">
+      </form>
+     </div>
+  </div>
+</div>
